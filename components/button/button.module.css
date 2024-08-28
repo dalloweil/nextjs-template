@@ -1,0 +1,29 @@
+.button {
+  padding: 0 6px;
+  height: 32px;
+  border-radius: 6px;
+  color: var(--ds-background-100);
+  background-color: var(--ds-gray-1000);
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: border-color, background, color, transform, box-shadow;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  user-select: none;
+  transform: translateZ(0);
+
+  &:hover {
+    background-color: #383838;
+  }
+}
+
+.button span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 6px;
+}

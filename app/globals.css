@@ -1,0 +1,30 @@
+:root {
+  --ds-background-100: #fff;
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-5: #666;
+  --ds-gray-200: #ebebeb;
+  --ds-gray-1000: hsla(0, 0%, 9%, 1);
+  --font-foreground: #000;
+}
+
+html {
+  color-scheme: light;
+  background-color: rgb(250, 250, 250);
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100%;
+  margin: 0;
+  line-height: 1.65;
+  overscroll-behavior-y: contain;
+}
+
+a {
+  color: #0074de;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: inherit;
+  text-decoration: inherit;
+}
