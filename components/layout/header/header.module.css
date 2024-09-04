@@ -19,18 +19,6 @@
   gap: 24px;
 }
 
-.navbar a {
-  text-decoration: none;
-  transition: color 0.15s ease;
-  font-size: 14px;
-  border-radius: 2px;
-  color: var(--accents-5);
-
-  &:hover {
-    color: var(--font-foreground);
-  }
-}
-
 .toggle,
 .mobileNav {
   display: none;
@@ -47,17 +35,17 @@
     cursor: pointer;
   }
 
-  .mobileNav {
-    z-index: 2;
-  }
-
   .mobileNav.active {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 64px;
     margin-bottom: 48px;
+    z-index: 1000;
+    background-color: var(--ds-background-100);
+    padding: 0 40px;
   }
 
   .mobileNav > a {

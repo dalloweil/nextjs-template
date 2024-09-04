@@ -22,7 +22,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <Link href="/">
-          <Image src="/vercel.svg" alt="Logo company" width={90} height={18} />
+          <Image src="/black-logo.svg" alt="Logo company" width={90} height={18} />
         </Link>
 
         {!isMobile && (
