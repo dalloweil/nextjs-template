@@ -22,9 +22,14 @@ body {
 }
 
 a {
-  color: #0074de;
   text-decoration: none;
-  transition: color 0.2s ease;
-  color: inherit;
-  text-decoration: inherit;
+  transition: color 0.15s ease;
+  font-size: 14px;
+  border-radius: 2px;
+  color: var(--accents-5);
+
+  &:hover {
+    color: var(--font-foreground);
+  }
 }
+
