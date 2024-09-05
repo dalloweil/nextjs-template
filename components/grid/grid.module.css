@@ -1,0 +1,24 @@
+.grid {
+  border-bottom: 1px solid var(--guide-color);
+  display: grid;
+  width: clamp(250px, 90vw, 1080px);
+  height: fit-content;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  position: relative;
+}
+
+.block {
+  padding: 48px;
+  transition: background .15s ease-out;
+  border: 1px solid var(--guide-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
