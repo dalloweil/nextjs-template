@@ -2,10 +2,13 @@
   --ds-background-100: #fff;
   --accents-1: #fafafa;
   --accents-2: #eaeaea;
+  --accents-3: #efefef;
   --accents-5: #666;
   --ds-gray-200: #ebebeb;
+  --ds-gray-900: hsla(0,0%,40%,1);
   --ds-gray-1000: hsla(0, 0%, 9%, 1);
   --font-foreground: #000;
+  --guide-color: hsla(0,0%,92%,1);
 }
 
 html {
@@ -33,3 +36,10 @@ a {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
