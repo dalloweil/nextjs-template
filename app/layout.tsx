@@ -11,7 +11,7 @@ const Header = dynamic(() => import("@/components/layout/header/header"), {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Template page",
+  title: "Dalloweil front-end template",
   description: "Dalloweil Team",
 };
 
