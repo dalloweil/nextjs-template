@@ -1,3 +1,7 @@
+import styles from "./about.module.css";
+
 export default function About() {
-    return <h1>Hello, Next.js!</h1>
-  }
+  return <section className={styles.about}>
+    <h1>:)</h1>
+  </section>
+}
