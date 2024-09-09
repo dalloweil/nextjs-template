@@ -5,11 +5,27 @@
   --accents-3: #efefef;
   --accents-5: #666;
   --ds-gray-200: #ebebeb;
+  --ds-gray-400: hsla(0,0%,92%,1);
   --ds-gray-900: hsla(0,0%,40%,1);
   --ds-gray-1000: hsla(0, 0%, 9%, 1);
   --font-foreground: #000;
   --guide-color: hsla(0,0%,92%,1);
 }
+
+.dark {
+  --ds-background-100: #000;
+  --accents-1: #1e1e1e;
+  --accents-2: #2c2c2c;
+  --accents-3: #333333;
+  --accents-5: #b3b3b3;
+  --ds-gray-200: #4a4a4a;
+  --ds-gray-400: hsla(0,0%,18%,1);
+  --ds-gray-900: hsla(0, 0%, 70%, 1);
+  --ds-gray-1000: hsla(0, 0%, 90%, 1);
+  --font-foreground: #e0e0e0;
+  --guide-color: hsla(0, 0%, 10%, 1);
+}
+
 
 html {
   color-scheme: light;
@@ -22,6 +38,7 @@ body {
   margin: 0;
   line-height: 1.65;
   overscroll-behavior-y: contain;
+  background-color: var(--ds-background-100);
 }
 
 a {
@@ -34,6 +51,10 @@ a {
   &:hover {
     color: var(--font-foreground);
   }
+}
+
+h1, h2, h3 {
+  color: var(--font-foreground);
 }
 
 ul {
