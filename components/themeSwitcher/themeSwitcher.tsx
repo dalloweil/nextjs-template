@@ -1,4 +1,4 @@
-import { Moon, Sun } from "lucide-react";
+import { Monitor, Moon, Sun } from "lucide-react";
 import styles from "./themeSwitcher.module.css";
 
 interface ThemeSwitcherProps {
@@ -11,6 +11,17 @@ export default function ThemeSwitcher({ theme, setTheme }: ThemeSwitcherProps) {
     <div className={styles.themeSwitcher} role="radiogroup">
       <button
         role="radio"
+        aria-label="Switch to system theme"
+        aria-checked
+        data-active={theme === "system"}
+        onClick={() => setTheme("system")}
+        className={styles.themeSwitch}
+      >
+        <Monitor width={14} />
+      </button>
+      <button
+        role="radio"
+        aria-label="Switch to light theme"
         aria-checked
         data-active={theme === "light"}
         onClick={() => setTheme("light")}
@@ -20,6 +31,7 @@ export default function ThemeSwitcher({ theme, setTheme }: ThemeSwitcherProps) {
       </button>
       <button
         role="radio"
+        aria-label="Switch to dark theme"
         aria-checked
         data-active={theme === "dark"}
         onClick={() => setTheme("dark")}
