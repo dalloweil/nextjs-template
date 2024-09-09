@@ -1,9 +1,8 @@
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
-interface LogoProps {
-  theme: string | undefined
-}
-
-export default function Logo({ theme }: LogoProps) {
-  return <Image src={theme === "dark" ? "/white-logo.svg" : "/black-logo.svg"} alt="Dalloweil company logo" width={90} height={18} />
+export default function Logo() {
+  const { theme, systemTheme } = useTheme();
+  const appliedTheme = theme === "system" ? systemTheme : theme;
+  return <Image src={appliedTheme === "dark" ? "/white-logo.svg" : "/black-logo.svg"} alt="Dalloweil company logo" width={90} height={18} />
 }

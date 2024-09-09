@@ -1,17 +1,14 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/button/button";
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import styles from "./header.module.css";
 import Logo from "@/components/ui/logo/logo";
-import { useTheme } from "next-themes";
 
 export default function Header() {
   const [mobileNavShown, setMobileNavShown] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
-  const { theme } = useTheme();
 
   const toggle = () => setMobileNavShown(!mobileNavShown);
 
@@ -25,7 +22,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <Link href="/">
-          <Logo theme={theme} />
+          <Logo />
         </Link>
 
         {!isMobile && (

@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import styles from "./footer.module.css";
 import Link from "next/link";
 import { Copyright } from "lucide-react";
@@ -22,7 +21,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.row}>
         <div className={styles.company}>
-          <Logo theme={theme} />
+          <Logo />
         </div>
 
         <div className={styles.column}>
