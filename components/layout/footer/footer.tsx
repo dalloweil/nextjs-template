@@ -1,15 +1,30 @@
+"use client"
 import Image from "next/image";
 import styles from "./footer.module.css";
 import Link from "next/link";
 import { Copyright } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import ThemeSwitcher from "@/components/themeSwitcher/themeSwitcher";
+import Logo from "@/components/ui/logo/logo";
 
 export default function Footer() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.row}>
         <div className={styles.company}>
-          <Image src="/black-logo.svg" alt="Dalloweil company logo" width={90} height={18} />
+          <Logo theme={theme} />
         </div>
+
         <div className={styles.column}>
           <h1 className={styles.columnTitle}>Company</h1>
           <div className={styles.items}>
@@ -37,7 +52,7 @@ export default function Footer() {
       </div>
       <div className={styles.row}>
         <span><Copyright width={14} /> 2024 Dalloweil, Inc.</span>
-      </div>
+        <ThemeSwitcher theme={theme} setTheme={setTheme} /> </div>
     </footer>
   );
 }
