@@ -6,7 +6,7 @@ import styles from "./header.module.css";
 import Modal from "@/components/modal/modal";
 import Logo from "@/ui/logo/logo";
 import SignInForm from "@/ui/signup-form/signup-form";
-import { Button, ButtonLink } from "@/components/button/button";
+import { Button } from "@/components/button/button";
 
 export default function Header() {
   const [mobileNavShown, setMobileNavShown] = useState(false);
@@ -57,7 +57,7 @@ export default function Header() {
         </Link>
         <div className={styles.mobileField}>
           <Button onClick={() => setOpenModal(true)}>
-            <span>Sign In</span>
+            Sign In
           </Button>
         </div>
       </nav>
