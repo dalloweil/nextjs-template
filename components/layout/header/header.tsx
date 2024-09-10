@@ -1,15 +1,17 @@
 "use client";
 import Link from "next/link";
-import Button from "@/components/button/button";
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import styles from "./header.module.css";
-import Logo from "@/components/ui/logo/logo";
+import Modal from "@/components/modal/modal";
+import Logo from "@/ui/logo/logo";
+import SignInForm from "@/ui/signup-form/signup-form";
+import { Button } from "@/components/button/button";
 
 export default function Header() {
   const [mobileNavShown, setMobileNavShown] = useState(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
-
+  const [openModal, setOpenModal] = useState<boolean>(false);
   const toggle = () => setMobileNavShown(!mobileNavShown);
 
   useEffect(() => {
@@ -18,6 +20,7 @@ export default function Header() {
     window.addEventListener("resize", handlerResize);
     return () => window.removeEventListener("resize", handlerResize);
   }, [isMobile]);
+
   return (
     <>
       <header className={styles.header}>
@@ -36,9 +39,14 @@ export default function Header() {
               </Link>
             </nav>
 
-            <Button role="link" href="/about">
-              <span>Sobre</span>
-            </Button>
+            <div className={styles.actions}>
+              <Button role="link" href="/about">
+                Sobre
+              </Button>
+              <Button onClick={() => setOpenModal(true)}>
+                Sign In
+              </Button>
+            </div>
           </>
         )}
 
@@ -56,7 +64,16 @@ export default function Header() {
         <Link title="Github Link" href="/about">
           Github
         </Link>
+        <div className={styles.mobileField}>
+          <Button onClick={() => setOpenModal(true)}>
+            <span>Sign In</span>
+          </Button>
+        </div>
       </nav>
+
+      <Modal open={openModal} onClick={() => setOpenModal(false)}>
+        <SignInForm />
+      </Modal>
     </>
   );
 }

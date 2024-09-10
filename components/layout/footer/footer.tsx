@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Copyright } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import ThemeSwitcher from "@/components/themeSwitcher/themeSwitcher";
-import Logo from "@/components/ui/logo/logo";
+import ThemeSwitcher from "@/components/theme-switcher/theme-switcher";
+import Logo from "@/ui/logo/logo";
 
 export default function Footer() {
   const { theme, setTheme } = useTheme();
