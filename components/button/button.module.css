@@ -2,6 +2,7 @@
   padding: 0 6px;
   height: 32px;
   border-radius: 6px;
+  border: 1px solid var(--accents-1);
   color: var(--ds-background-100);
   background-color: var(--ds-gray-1000);
   font-weight: 500;
@@ -14,9 +15,12 @@
   transition-timing-function: ease;
   user-select: none;
   transform: translateZ(0);
+  cursor: pointer;
+  width: 100%;
 
   &:hover {
-    background-color: #383838;
+    background-color: var(--ds-gray-400);
+    color: var(--ds-gray-1000);
   }
 }
 
