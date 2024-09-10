@@ -1,0 +1,20 @@
+.loading {
+  height: 10px;
+  aspect-ratio: 2;
+  border: 10px solid transparent;
+  background: 
+    radial-gradient(farthest-side, var(--ds-background-100) 98%, transparent ) left/5px 5px,
+    radial-gradient(farthest-side, var(--ds-background-100) 98%, transparent ) left/5px 5px,
+    radial-gradient(farthest-side, var(--ds-background-100) 98%, transparent ) center/5px 5px,
+    radial-gradient(farthest-side, var(--ds-background-100) 98%, transparent) right/5px 5px,
+    transparent;
+  background-repeat: no-repeat;
+  animation: load 1s infinite;
+}
+
+@keyframes load {
+  100%  { 
+    background-position: right, left, center, right;
+  }
+}
+

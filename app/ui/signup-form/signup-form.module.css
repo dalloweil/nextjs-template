@@ -1,0 +1,31 @@
+.signIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+.header > h1 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.header > p {
+  color: var(--ds-gray-900);
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.header > h1, .header > p {
+  text-align: center;
+}
