@@ -6,7 +6,7 @@ import styles from "./header.module.css";
 import Modal from "@/components/modal/modal";
 import Logo from "@/ui/logo/logo";
 import SignInForm from "@/ui/signup-form/signup-form";
-import { Button } from "@/components/button/button";
+import { Button, ButtonLink } from "@/components/button/button";
 
 export default function Header() {
   const [mobileNavShown, setMobileNavShown] = useState(false);
@@ -31,18 +31,12 @@ export default function Header() {
         {!isMobile && (
           <>
             <nav className={styles.navbar}>
-              <Link title="About" href="/about">
-                About
-              </Link>
-              <Link title="Github Link" href="/about">
-                Github
+              <Link title="Page" href="/page">
+                Page
               </Link>
             </nav>
 
             <div className={styles.actions}>
-              <Button role="link" href="/about">
-                Sobre
-              </Button>
               <Button onClick={() => setOpenModal(true)}>
                 Sign In
               </Button>
@@ -58,11 +52,8 @@ export default function Header() {
       <nav
         className={`${styles.mobileNav} ${mobileNavShown ? styles.active : ""}`}
       >
-        <Link title="About" href="/about">
-          About
-        </Link>
-        <Link title="Github Link" href="/about">
-          Github
+        <Link title="Page" href="/page">
+          Page
         </Link>
         <div className={styles.mobileField}>
           <Button onClick={() => setOpenModal(true)}>

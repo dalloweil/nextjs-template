@@ -50,7 +50,7 @@ body {
   background-color: var(--ds-background-100);
 }
 
-a {
+a, button {
   text-decoration: none;
   transition: color 0.15s ease;
   font-size: 14px;

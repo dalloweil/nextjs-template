@@ -1,7 +1,7 @@
 import type { AriaRole } from "react";
 import styles from "./button.module.css";
 
-interface ButtonProps {
+interface ButtonLinkProps {
   role?: AriaRole;
   href?: string;
   type?: string;
@@ -9,13 +9,13 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export function Button({
+export function ButtonLink({
   role,
   href,
   type,
   children,
   onClick,
-}: ButtonProps) {
+}: ButtonLinkProps) {
   return (
     <a
       role={role}
@@ -31,17 +31,17 @@ export function Button({
   );
 }
 
-interface SubmitButtonProps extends ButtonProps {
+interface ButtonProps extends ButtonLinkProps {
   type?: "submit" | "reset" | "button";
-  disabled: boolean
+  disabled?: boolean
 }
 
-export function SubmitButton({
+export function Button({
   type,
   children,
   onClick,
   disabled
-}: SubmitButtonProps) {
+}: ButtonProps) {
   return (
     <button
       disabled={disabled}
