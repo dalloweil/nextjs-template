@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+
+.textField {
+  position: relative;
+  display: inline-flex;
+  height: 3.5rem;
+  min-height: 2.5rem;
+  width: 100%;
+  flex-direction: column;
+  border-radius: .4rem;
+  padding: .5rem .75rem;
+  background-color: var(--accents-4);
+  box-shadow: rgba(0, 0, 0, .05);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: text;
+
+  &:hover {
+    background-color: var(--input-shadow);
+  }
+}
+
+.label {
+  position: absolute;
+  cursor: text;
+  font-size: 0.7rem;
+  color: var(--font-foreground)
+}
+
+.input {
+  background-clip: text;
+  font-size: 1rem;
+  height: 100%;
+  padding-top: 1rem;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.error {
+  color: var(--error-msg);
+  width: 100%;
+}

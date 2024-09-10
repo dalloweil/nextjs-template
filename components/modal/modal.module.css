@@ -1,0 +1,24 @@
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--ds-background-over);
+  backdrop-filter: blur(12px);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  margin: auto;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 28rem;
+  overflow: hidden;
+  border: 1px solid var(--accents-2);
+  border-radius: .4rem;
+  background-color: var(--ds-background-100);
+  box-shadow: var(--box-shadow-modal);
+  box-sizing: border-box;
+  padding: 2rem;
+}
