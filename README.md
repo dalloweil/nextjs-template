@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Highlights ✨
 
-## Getting Started
+- **🚀 Fast Performance**: Built with Next.js for static and server-side rendering, ensuring quick load times and a smooth user experience.
 
-First, run the development server:
+- **🎨 Theme Support**: Easily switch between light and dark modes using the `next-themes` library for a personalized experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **🖼️ Image Optimization**: Utilizes `sharp` for efficient image processing and optimization, enhancing performance and load times.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🔒 Secure and Reliable**: Developed with TypeScript and schema validation using `zod` to ensure code and data integrity.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **🔍 SEO Optimized**: Includes best practices for SEO to improve search engine rankings and visibility.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **🛠️ Customizable Components**: Comes with a variety of reusable components such as buttons, modals, and text fields, making UI development and customization easy.
 
-## Learn More
+- **🌍 Internationalization**: Supports multiple languages and easy translation integration to reach a global audience.
 
-To learn more about Next.js, take a look at the following resources:
+- **🔧 Development Tools**: Includes tools like ESLint and TypeScript for robust development and code quality.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [x] Better SEO
+- [x] Dark mode
+- [x] Responsive Hamburger Menu
+- [ ] Authentication Form
+- [ ] Open Graph support
+- [ ] Sitemap
+- [ ] Accessibility Standards
+- [ ] Multilingual Support
+- [ ] Automated Testing
+- [ ] Deployment Configurations
+- [ ] Analytics Integration
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Roadmap components
+- [ ] **Core Components**
+	- [x] Layout Component
+	- [x] Header
+	- [x] Footer
+	- [ ] Sidebar
+- [x] **UI Components**
+	- [x] Button
+	- [ ] Card
+	- [x] Modal
+	- [ ] Tooltip
+	- [ ] Badge
+- [ ] **Form Components**
+	- [x] TextField
+	- [ ] TextArea
+	- [ ] SelectDropdown
+	- [ ] Checkbox & Radio Button
+	- [ ] Form validation
+- [ ] **Navigation Components**
+	- [ ] Navbar
+	- [ ] Breadcrumbs
+	- [ ] Pagination
+- [ ] **Utility Components**
+	- [x] Loader
+	- [ ] Error Boundary
+	- [ ] Notification
+- [ ] **Authentication Components**
+	- [x] Login Form
+	- [ ] Register Form
+	- [ ] Password Reset
+- [ ] **Performance Optimization**
+	- [ ] Lazy Loading
+- [ ] **Internationalization**
+	- [ ] Language Switcher
