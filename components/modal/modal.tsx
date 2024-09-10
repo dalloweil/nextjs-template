@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./modal.module.css";
 
 interface ModalProps {
@@ -7,17 +8,23 @@ interface ModalProps {
 }
 
 export default function Modal({ open, children, onClick }: ModalProps) {
-  return (<>
-    {
-      open && (
-        <>
-          <div className={styles.modalBackdrop} onClick={onClick} />
-          <div className={styles.modal}>
-            {children}
-          </div>
-        </>
-      )
-    }
-  </>
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  if (!open) return null;
+
+  return (
+    <>
+      <div className={styles.modalBackdrop} onClick={onClick} />
+      <div role="dialog" className={styles.modal}>
+        {children}
+      </div>
+    </>
   );
 }
+

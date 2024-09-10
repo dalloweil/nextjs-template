@@ -36,7 +36,6 @@
   --error-msg: hsl(339.20000000000005 90.36% 51.18%);
 }
 
-
 html {
   color-scheme: light;
   background-color: rgb(250, 250, 250);
@@ -78,4 +77,5 @@ ul {
 
 *, :after, :before {
   box-sizing: border-box;
+  border: 0 solid #e5e7eb;
 }
