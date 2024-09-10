@@ -1,5 +1,5 @@
 import { Monitor, Moon, Sun } from "lucide-react";
-import styles from "./themeSwitcher.module.css";
+import styles from "./theme-switcher.module.css";
 
 interface ThemeSwitcherProps {
   theme?: string;
